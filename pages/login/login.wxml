@@ -1,0 +1,4 @@
+<!--pages/login/login.wxml-->
+<view class="movie-history">
+    <button type="primary" bindtap="login">登录</button>
+</view>

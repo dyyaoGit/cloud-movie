@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+    <swiper class="news-swiper"
+            indicator-active-color="#409eff"
+            indicator-dots="{{true}}">
+        <swiper-item wx:for="{{swiper}}" wx:key="{{index}}" class="news-swiper-item">
+            <view class="swiper-item-wrap">
+                <image src="{{item.img}}" class="news-swiper-img"></image>
+                <text class="swiper-title">
+                    {{item.title}}
+                </text>
+            </view>
+        </swiper-item>
+    </swiper>
+    <navigator
+            wx:for="{{news}}"
+               wx:key="{{index}}" url="/pages/articleDetails/articleDetails?id={{item._id}}" class="content">
+        <content-item
+
+                author-avatar="{{item.authorAvatar}}"
+                time="{{item.timeStr}}"
+                title="{{item.title}}"
+                img="{{item.img}}"
+                content="{{item.contentPre}}"
+        ></content-item>
+    </navigator>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/movie/movie.wxml-->
+<view class="movie">
+    <swiper class="swiper"
+            indicator-color="rgba(255,255,255,.8)"
+            indicator-active-color="#409eff"
+            circular="{{true}}"
+            indicator-dots="{{true}}">
+        <swiper-item class="swiper-item"
+                     wx:for="{{swiper}}"
+                     wx:key="{{index}}"
+        >
+            <view class="img-wrap">
+                <image src="{{item.img}}" class="swiper-img"></image>
+            </view>
+        </swiper-item>
+    </swiper>
+
+    <view class="hot-movie">
+        <view class="title">
+            热门电影
+        </view>
+        <view class="movie-content">
+            <navigator url="/pages/movieDetails/movieDetails?id={{item._id}}" class="movie-item"
+                  wx:for="{{movies}}"
+                  wx:key="{{index}}"
+            >
+                <image src="{{item.img}}" class="movie-img"></image>
+                <view class="title">
+                    {{item.title}}
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>

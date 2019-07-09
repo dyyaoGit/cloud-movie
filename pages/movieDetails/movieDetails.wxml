@@ -1,0 +1,66 @@
+<!--pages/movieDetails/movieDetails.wxml-->
+<view class="movie-details">
+    <video  class="video"
+            id="video"
+            src="{{url}}"
+           controls="{{true}}"
+           show-fullscreen-btn="{{true}}"
+           show-center-play-btn="{{true}}"
+           show-play-btn="{{true}}"
+           poster="{{movie.img}}"
+           title="{{movie.title}}"
+           vslide-gesture="{{true}}"
+    ></video>
+
+    <view class="play-list">
+        <button
+                class="play-list-item {{activeIndex == index ? 'active': ''}}"
+                wx:for="{{movie.linksTitle}}"
+                wx:key="{{index}}"
+                bindtap="changeUrl"
+                data-index="{{index}}"
+        >
+            {{item}}
+        </button>
+    </view>
+
+    <view class="movie-desc">
+        <view class="row-one">
+            <view class="title">
+                {{movie.title}}
+            </view>
+            <view class="desc">
+                简介 >
+            </view>
+        </view>
+        <view class="douban">
+            <text class="douban-text">
+                豆瓣评分: {{movie.grade}}
+            </text>
+        </view>
+        <view class="desc-content">
+            {{movie.plot}}
+        </view>
+    </view>
+
+    <view class="guess">
+        <view class="title">
+            猜你喜欢
+        </view>
+
+        <view class="guess-content">
+            <view class="item"
+                  wx:for="{{guess}}"
+                  wx:key="{{index}}"
+            >
+                <image src="{{item.img}}" class="item-img"></image>
+                <view class="item-right">
+                    <view class="title">{{item.title}}</view>
+                    <view class="little-title">
+                        {{item.actorStr}} 领衔主演
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

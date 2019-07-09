@@ -1,0 +1,2 @@
+<!--pages/articleDetails/after-time/after-time.wxml-->
+<text>{{dateStr}}</text>

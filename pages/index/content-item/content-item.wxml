@@ -1,0 +1,20 @@
+
+<view class="content-item">
+    <view class="content-msg">
+        <image src="{{authorAvatar}}" class="author-avatar"></image>
+        <text class="time">
+            {{time}}
+        </text>
+    </view>
+    <view class="title">
+        {{title}}
+    </view>
+    <view class="main-img">
+        <image src="{{img}}"></image>
+    </view>
+    <view class="content-pre">
+        <text>
+            {{content}}
+        </text>
+    </view>
+</view>

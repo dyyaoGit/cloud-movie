@@ -1,0 +1,29 @@
+<!--pages/articleDetails/articleDetails.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<!--<import src="你的路径/wxParse/wxParse.wxml"/>-->
+
+
+
+<view class="article-details">
+    <view class="img-wrap">
+        <image src="{{res.img}}" class="img"></image>
+    </view>
+
+    <view class="author-msg">
+        <image src="{{res.authorAvatar}}" class="avatar"></image>
+        <text class="author">{{res.author}}</text>
+        <text class="publish">发表于</text>
+        <after-time class="day" date="{{res.update_time}}"></after-time>
+    </view>
+    <!--<template is="wxParse" data="{{wxParseData: content.nodes}}"></template>-->
+    <view class="title">
+        {{res.title}}
+    </view>
+    <view class="menu">
+        <button class="iconfont iconshoucang icon"></button>
+        <button open-type="share" class="iconfont iconfenxiang3 icon"></button>
+    </view>
+    <view class="content">
+        <template is="wxParse" data="{{wxParseData: content.nodes}}"></template>
+    </view>
+</view>

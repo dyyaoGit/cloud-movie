@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "after-time": "./after-time/after-time"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/articleDetails/articleDetails",
+    "pages/movie/movie",
+    "pages/movieDetails/movieDetails",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarTitleText": "云电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "text": "文章",
+        "iconPath": "assets/tab-icon/article_default.png",
+        "selectedIconPath": "assets/tab-icon/article_active.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "电影",
+        "iconPath": "assets/tab-icon/movie_default.png",
+        "selectedIconPath": "assets/tab-icon/movie_active.png",
+        "pagePath": "pages/movie/movie"
+      },
+      {
+        "text": "我的",
+        "iconPath": "assets/tab-icon/movie_default.png",
+        "selectedIconPath": "assets/tab-icon/movie_active.png",
+        "pagePath": "pages/login/login"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
