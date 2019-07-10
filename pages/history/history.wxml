@@ -1,0 +1,13 @@
+<view class="history">
+    <view class="history-item" wx:for="{{history}}" wx:key="{{index}}" bindtap="jump" data-id="{{item._id}}" data-index="{{item.index}}">
+        <image src="{{item.movie.img}}" class="img"></image>
+        <view class="history-item-right">
+            <view class="top">
+                <view class="title">{{item.movie.title}}</view>
+                <progress class="progress" percent="{{item.percent}}"
+                ></progress>
+            </view>
+            <text class="time">{{item.str}}</text>
+        </view>
+    </view>
+</view>

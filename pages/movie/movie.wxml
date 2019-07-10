@@ -20,7 +20,7 @@
             热门电影
         </view>
         <view class="movie-content">
-            <navigator url="/pages/movieDetails/movieDetails?id={{item._id}}" class="movie-item"
+            <navigator url="/pages/movieDetails/movieDetails?id={{item._id}}&index=0" class="movie-item"
                   wx:for="{{movies}}"
                   wx:key="{{index}}"
             >

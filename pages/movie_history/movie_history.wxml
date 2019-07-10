@@ -3,14 +3,14 @@
     <video  class="video"
             id="video"
             src="{{url}}"
-           controls="{{true}}"
+            controls="{{true}}"
             bindtimeupdate="getTime"
-           show-fullscreen-btn="{{true}}"
-           show-center-play-btn="{{true}}"
-           show-play-btn="{{true}}"
-           poster="{{movie.img}}"
-           title="{{movie.title}}"
-           vslide-gesture="{{true}}"
+            show-fullscreen-btn="{{true}}"
+            show-center-play-btn="{{true}}"
+            show-play-btn="{{true}}"
+            poster="{{movie.img}}"
+            title="{{movie.title}}"
+            vslide-gesture="{{true}}"
     ></video>
 
     <view class="play-list">

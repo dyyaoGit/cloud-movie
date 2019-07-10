@@ -12,7 +12,9 @@ Page({
         url: '',
         activeIndex: 0,
         guess: [],
-        currentTime: 0
+        currentTime: 0,
+        isFirst: true,
+        continueTime: 0
     },
     getGuess (id) {
         axios.get('/guess', {
@@ -47,13 +49,29 @@ Page({
             })
         })
     },
-    onLoad: function (options) {
-        const {id, index} = options;
-        this.setData({
-            movie_id: id
+    getHistory (id) {
+        axios.get(`/movie_history/${id}`).then(res => {
+            this.setData({
+                movie_id: res.data.movie._id,
+                movie: res.data.movie,
+                activeIndex: Number(res.data.index),
+                url: res.data.movie.links[Number(res.data.index)],
+                continueTime: Number(res.data.continueTime)
+            })
+            this.getGuess(res.data.movie._id);
+            const videoCtx = wx.createVideoContext('video');
+            videoCtx.play();
         })
-        this.getMovie(id, index);
-        this.getGuess(id);
+    },
+    onLoad: function (options) {
+        console.log(options);
+        const {id} = options;
+        this.getHistory(id);
+        // this.setData({
+        //     movie_id: id
+        // })
+        // this.getMovie(id, index);
+        // this.getGuess(id);
     },
 
     /**
@@ -81,8 +99,14 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     getTime (e) {
-        console.log(e);
         const continueTime = e.detail.currentTime;
+        if(this.data.isFirst){
+            const videoCtx = wx.createVideoContext('video');
+            videoCtx.seek(this.data.continueTime);
+            this.setData({
+                isFirst: false
+            })
+        }
         this.setData({
             currentTime: continueTime
         })

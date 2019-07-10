@@ -5,11 +5,18 @@ class Axios {
     }
     sendMsg (url, data, method) {
         const _this = this;
+        const token = wx.getStorageSync('token');
+        const header = {};
+        if(token) {
+            header.token = token;
+        }
+
         return new Promise((resolve, reject) => {
             wx.request({
                 url: _this.baseURL + url,
                 data,
                 method,
+                header,
                 success: (res) => {
                     resolve(res.data)
                 },

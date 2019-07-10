@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -68,6 +68,13 @@
 					"id": -1,
 					"name": "电影详情页",
 					"pathName": "pages/movieDetails/movieDetails",
+					"query": "id=5d1af45c303a760654d72125",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "历史记录",
+					"pathName": "pages/history/history",
 					"query": "id=5d1af45c303a760654d72125",
 					"scene": null
 				}

@@ -26,6 +26,14 @@ Page({
         })
 
     },
+    getCookie () {
+        // wx.request({
+        //     success(res) {
+        //         // res.header // 响应头。 set-cookie
+        //     }
+        // })
+
+    },
     onLoad: function (options) {
 
     },

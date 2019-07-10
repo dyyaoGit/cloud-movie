@@ -4,7 +4,9 @@
     "pages/articleDetails/articleDetails",
     "pages/movie/movie",
     "pages/movieDetails/movieDetails",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/history/history",
+    "pages/movie_history/movie_history"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,10 +31,10 @@
         "pagePath": "pages/movie/movie"
       },
       {
-        "text": "我的",
+        "text": "历史观影",
         "iconPath": "assets/tab-icon/movie_default.png",
         "selectedIconPath": "assets/tab-icon/movie_active.png",
-        "pagePath": "pages/login/login"
+        "pagePath": "pages/history/history"
       }
     ]
   },
